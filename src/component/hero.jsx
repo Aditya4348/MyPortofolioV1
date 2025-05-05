@@ -4,7 +4,8 @@ import Button from './heroCompo/button.jsx';
 import Adit from '../assets/Adit2_1.png';
 import Particles from './reactBits/Particles/Particles.jsx';
 
-export default function Hero() {
+export default function Hero({text}) {
+
     return (
         <div className="flex flex-col-reverse md:flex-row items-center justify-center container mx-auto px-4 py-5 md:gap-5 md:p-8 min-h-[80vh] w-full">
             {/* Left side - Text content */}
@@ -15,14 +16,16 @@ export default function Hero() {
                     showBorder={false}
                     className="text-3xl md:text-4xl font-semibold mb-4 font-montserrat"
                 >
-                    Hi, I'm Aditya Alfitodinova
+                    {text.introduction}
                 </GradientText>
                 <p className="text-base md:text-lg leading-relaxed text-white mb-6 md:mb-8 font-lato">
-                    I’m a passionate Web Developer focused on building modern, high-quality websites.
-                    I’m committed to growing continuously and staying up-to-date with the latest web technologies.
+                    {text.description}
                 </p>
-                <Button>
+                <Button link={text.link}>
                     My LinkedIn
+                </Button>
+                <Button link={text.linkGit}>
+                    My GitHub
                 </Button>
             </div>
 

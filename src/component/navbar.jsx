@@ -14,7 +14,7 @@ const MenuItem = ({className}) => {
     )
 }
 
-export default function Navbar() {
+export default function Navbar({text}) {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = () => {
@@ -32,7 +32,7 @@ export default function Navbar() {
                     {/* Logo Container */}
                     <div className="flex-shrink-0 flex items-center">
                         <h1 className="text-2xl font-bold">
-                            MyPortofolio
+                            {text.title}
                         </h1>
                     </div>
 
