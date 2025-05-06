@@ -4,12 +4,9 @@ const MenuItem = ({className}) => {
     return (
         <div className={className}>
             <a href="#" className="Menu-item">Home</a>
-            <a href="#" className="Menu-item">About</a>
+            <a href="#aboutMe" className="Menu-item">About</a>
             <a href="#" className="Menu-item">Services</a>
             <a href="#" className="Menu-item">Contact</a>
-            <button className="w-full mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition duration-300">
-                Download CV
-            </button>
         </div>
     )
 }

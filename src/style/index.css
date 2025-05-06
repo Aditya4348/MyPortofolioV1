@@ -8,8 +8,18 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    scroll-behavior: smooth;
+}
+
 @layer components {
     .Menu-item {
         @apply block px-3 py-2 text-white hover:text-blue-500 transition duration-300 font-lato font-semibold;
+    }
+}
+
+@layer components {
+    .buttonAboutMe {
+        @apply inline-flex items-center px-6 py-3 text-sm border border-white font-medium text-white bg-gray-600 rounded-full hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 transition-all duration-200 ease-in-out relative z-10 cursor-pointer;
     }
 }
