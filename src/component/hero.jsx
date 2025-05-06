@@ -2,7 +2,6 @@ import Orb from './reactBits/Orb/Orb.jsx';
 import GradientText from './reactBits/GradientText/GradientText.jsx';
 import Button from './heroCompo/button.jsx';
 import Adit from '../assets/Adit2_1.png';
-import Particles from './reactBits/Particles/Particles.jsx';
 
 export default function Hero({text}) {
 
