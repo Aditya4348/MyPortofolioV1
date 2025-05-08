@@ -1,4 +1,5 @@
 import { useState } from "react";
+import content from "./content/content.jsx";
 
 const MenuItem = ({className}) => {
     return (
@@ -12,15 +13,12 @@ const MenuItem = ({className}) => {
 }
 
 export default function Navbar({text}) {
+    // State for Mobile Menu
     const [isOpen, setIsOpen] = useState(false);
-
-    const handleClick = () => {
-        setIsOpen(!isOpen);
-    }
-
-
-
+    const handleClick = () => setIsOpen(!isOpen);
     const menuActive = isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full backdrop-blur-lg pointer-events-none';
+
+    const navbarContent = content.find(item => item.page === "navbar");
 
     return (
         <nav className="fixed w-full bg-black/80 backdrop-blur-lg text-white shadow-lg z-50">
@@ -29,7 +27,7 @@ export default function Navbar({text}) {
                     {/* Logo Container */}
                     <div className="flex-shrink-0 flex items-center">
                         <h1 className="text-2xl font-bold">
-                            {text.title}
+                            {navbarContent.title}
                         </h1>
                     </div>
 

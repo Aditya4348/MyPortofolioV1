@@ -2,11 +2,21 @@ import Orb from './reactBits/Orb/Orb.jsx';
 import GradientText from './reactBits/GradientText/GradientText.jsx';
 import Button from './heroCompo/button.jsx';
 import Adit from '../assets/Adit2_1.png';
+import content from './content/content.jsx';
+import Particles from './reactBits/Particles/particleMain.jsx';
 
-export default function Hero({text}) {
+export default function Hero() {
+
+    // State for Hero Content
+    const heroContent = content.find(item => item.page === "hero");
+
 
     return (
         <div className="flex flex-col-reverse md:flex-row items-center justify-center container mx-auto px-4 py-5 md:gap-5 md:p-8 min-h-[80vh] w-full">
+
+            {/* particles background */}
+            <Particles Top="0"/>
+
             {/* Left side - Text content */}
             <div className="flex-1 p-4 md:p-0 mt-4 md:mt-10 max-w-2xl text-center md:text-left">
                 <GradientText
@@ -15,15 +25,19 @@ export default function Hero({text}) {
                     showBorder={false}
                     className="text-3xl md:text-4xl font-semibold mb-4 font-montserrat"
                 >
-                    {text.introduction}
+                    {heroContent.introduction}
                 </GradientText>
+
+                {/* description */}
                 <p className="text-base md:text-lg leading-relaxed text-white mb-6 md:mb-8 font-lato">
-                    {text.description}
+                    {heroContent.description}
                 </p>
-                <Button link={text.link}>
+
+                {/* buttons */}
+                <Button link={heroContent.link}>
                     My LinkedIn
                 </Button>
-                <Button link={text.linkGit}>
+                <Button link={heroContent.linkGit}>
                     My GitHub
                 </Button>
             </div>

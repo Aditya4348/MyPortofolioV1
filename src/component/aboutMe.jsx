@@ -1,6 +1,8 @@
 import { useState } from "react";
-import Particles from "./reactBits/Particles/Particles.jsx";
 import QuoteCard from "./quotesCompo/quotes.jsx";
+import content from "./content/content.jsx";
+import Particles from "./reactBits/Particles/particleMain.jsx";
+
 
 const Button = ({ children, path }) => {
     return (
@@ -13,33 +15,29 @@ const Button = ({ children, path }) => {
     )
 }
 
-export default function AboutMe({ text }) {
+export default function AboutMe() {
+    const aboutMeContent = content.find(item => item.page === "about");
+
     return (
         <div id="aboutMe" className="container mx-auto min-h-screen flex items-start justify-center px-4">
-            <div className="absolute top-100 left-0 w-full h-full">
-                <Particles
-                    particleColors={['#ffffff', '#ffffff']}
-                    particleCount={500}
-                    particleSpread={20}
-                    speed={0.1}
-                    particleBaseSize={100}
-                    moveParticlesOnHover={false}
-                    alphaParticles={true}
-                    disableRotation={false}
-                />
-            </div>
+
+            {/* particles background */}
+            <Particles Top="100"/>
+
             <div className="flex flex-col items-center justify-around gap-14 w-full h-auto">
                 <QuoteCard
-                    quote={text.quote}
-                    author={text.author}
-                    image={text.image}
+                    quote={aboutMeContent.quote}
+                    author={aboutMeContent.author}
+                    image={aboutMeContent.image}
                 />
+
+                {/* about me content */}
                 <div className="mx-auto flex flex-col border border-white bg-gradient-to-br bg-gray-800/80 rounded-md items-center justify-center gap-7 w-full h-full p-6">
                     <h1 className="text-white text-2xl font-bold">
-                        {text.title}
+                        {aboutMeContent.title}
                     </h1>
                     <p className="text-white text-base leading-relaxed font-medium text-center font-montserrat space-y-4">
-                        {text.description}
+                        {aboutMeContent.description}
                     </p>
                     <div className="flex flex-row items-center justify-center gap-4">
                         <Button
