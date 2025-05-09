@@ -1,7 +1,7 @@
 import { useState } from "react";
-import QuoteCard from "./quotesCompo/quotes.jsx";
-import content from "./content/content.jsx";
-import Particles from "./reactBits/Particles/particleMain.jsx";
+import QuoteCard from "../quotesCompo/quotes.jsx";
+import content from "../content/content.jsx";
+import Particles from "../reactBits/Particles/particleMain.jsx";
 
 
 const Button = ({ children, path }) => {

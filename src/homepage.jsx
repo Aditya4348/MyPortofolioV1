@@ -1,11 +1,12 @@
-import Navbar from "./component/navbar.jsx";
-import Hero from "./component/hero.jsx";
-import AboutMe from "./component/aboutMe.jsx";
-import Footer from "./component/footer.jsx";
+import Navbar from "./component/Page/navbar.jsx";
+import Hero from "./component/Page/hero.jsx";
+import AboutMe from "./component/Page/aboutMe.jsx";
+import Footer from "./component/Page/footer.jsx";
+import Portofolio from "./component/Page/portofolio.jsx";
 
 
 
-export default function Homepage({ className }) {
+export default function Homepage({ className }) {   
 
 
     return (
@@ -13,6 +14,7 @@ export default function Homepage({ className }) {
             <Navbar/>
             <Hero/>
             <AboutMe/>
+            <Portofolio/>
             <Footer />
         </div>
     )

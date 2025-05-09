@@ -1,5 +1,5 @@
 import { useState } from "react";
-import content from "./content/content.jsx";
+import content from "../content/content.jsx";
 
 const MenuItem = ({className}) => {
     return (

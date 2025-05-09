@@ -23,3 +23,31 @@
         @apply inline-flex items-center px-6 py-3 text-sm border border-white font-medium text-white bg-gray-600 rounded-full hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 transition-all duration-200 ease-in-out relative z-10 cursor-pointer;
     }
 }
+
+@layer components {
+ .BoxPortofolio {
+    @apply container mx-auto flex flex-col items-center bg-slate-400 justify-start h-screen py-10;
+ }
+}
+
+@layer components {
+    .button-group-container {
+        @apply flex flex-col items-center space-y-4;
+    }
+
+    .button-group {
+        @apply flex items-center justify-center space-x-2 p-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg;
+    }
+
+    .button-group .MuiButton-root {
+        @apply text-white font-medium px-6 py-2 rounded-lg transition-all duration-300 ease-in-out;
+    }
+
+    .button-group .MuiButton-root:hover {
+        @apply bg-white/20 transform -translate-y-0.5 shadow-md;
+    }
+
+    .button-group .MuiButton-root:active {
+        @apply transform translate-y-0;
+    }
+}
