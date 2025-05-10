@@ -1,5 +1,6 @@
 
 import Warrior from "../../assets/Wariors.png";
+import Project from "./project.jsx";
 
     const content = [
         {
@@ -26,8 +27,23 @@ import Warrior from "../../assets/Wariors.png";
             title: "Content 4",
             description: "Description 4"
         },
-        {
+    ]
 
+export const portoMenu = [
+        {
+            id: 1,
+            title: "Project",
+            content: <Project />
+        },
+        {
+            id: 2,
+            title: "Gallery",
+            content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            id: 3,
+            title: "My Skills",
+            content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
     ]
 
